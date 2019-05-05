@@ -1,0 +1,221 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>利用Tshock在Centos上搭建Terraria云服务器 | Huaji</title>
+<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1557070355556">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://leohuaji.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://leohuaji.github.io">
+  <img class="avatar" src="https://leohuaji.github.io/images/avatar.png?v=1557070355556" alt="">
+  </a>
+  <h1 class="site-title">
+    Huaji
+  </h1>
+  <p class="site-description">
+    滑天下之大稽
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/friends_link/" class="menu">
+          友情链接
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+      
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              利用Tshock在Centos上搭建Terraria云服务器
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2018-04-07 ·
+              </time>
+              
+                <a href="https://leohuaji.github.io/tag/linux" class="post-tags">
+                  # Linux
+                </a>
+              
+                <a href="https://leohuaji.github.io/tag/terraria" class="post-tags">
+                  # Terraria
+                </a>
+              
+                <a href="https://leohuaji.github.io/tag/centos" class="post-tags">
+                  # CentOS
+                </a>
+              
+            </div>
+            
+              <div class="post-feature-image" style="background-image: url('http://ww1.sinaimg.cn/mw690/aa773c9egy1g2g4zk9ev2j20xc0dwdj7.jpg')">
+              </div>
+            
+            <div class="post-content">
+              <p>本文介绍如何在云服务器上搭建Terraria（泰拉瑞亚）游戏服务器。</p>
+<p>想和小伙伴一起玩Terraria，但是搭建本地服务器依旧很不方便，所以想搭建自己的云服务器，让小伙伴们随时可以连接，开始游戏。</p>
+<p>这里，我的搭建环境是“阿里云（Centos）”，如果你想参考此教程在自己的服务器上搭建游戏服务器，可能因系统差异，需要注意操作差别。</p>
+<p>接下来会用到的工具<a href="https://tshock.co/xf/index.php">Tshock</a>是一款第三方的Terraria开服工具，与官方工具相比，更方便自由的功能。</p>
+<p>但是，Terraria是用.Net开发的，在Linux上运行需要mono支持。（Xamarin公司开发的跨平台 .NET运行环境）</p>
+<p>开始吧。</p>
+<p><strong>安装mono：</strong></p>
+<p>Mono包并没有包含在CentOS的仓库里，通过yum是无法直接安装的，我们需要把Mono的仓库导入到包仓库里，运行如下命令行：</p>
+<pre><code>rpm --import &quot;http://keyserver.ubuntu.com/pks/lookup?op=get&amp;amp;search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF&quot;
+</code></pre>
+<pre><code>yum-config-manager --add-repo http://download.mono-project.com/repo/centos/
+</code></pre>
+<p>若提示找不到yum-config-manager，是因为系统默认未安装这个命令，此命令在yum-utils 包里，可通过命令yum -y install yum-utils 安装：</p>
+<pre><code>yum -y install yum-utils
+</code></pre>
+<pre><code>rpm -qa | grep yum
+</code></pre>
+<p>命令滚动后，执行：</p>
+<pre><code>yum install mono
+</code></pre>
+<p>命令滚动后运行</p>
+<pre><code>mono –V
+</code></pre>
+<p>查看版本号，确认安装成功。</p>
+<p><strong>下载Tshock：</strong></p>
+<pre><code>wget -O tshock.zip 'https://github.com/Pryaxis/TShock/releases/download/v4.3.25/tshock_4.3.25.zip'
+</code></pre>
+<p>为适应版本的更新，可以在<a href="https://github.com/Pryaxis/TShock/releases">这里</a>找到最新的版本，然后替换上面命令行中的版本号（注意有两处），就可以下载到最新的版本。</p>
+<p>解压：
+先安装unzip（安装过则跳过此步骤）：</p>
+<pre><code>yum install unzip
+</code></pre>
+<p>解压Tshock（具体目录看你的情况）：</p>
+<pre><code>unzip tshock.zip -d 你的目录
+</code></pre>
+<p><strong>运行Tshock：</strong></p>
+<p>在运行之前，需要安装screen。（Screen是一款由GNU计划开发的用于命令行终端切换的自由软件，相当于Windows下不同的窗口）</p>
+<pre><code>yum install screen
+</code></pre>
+<p>进入tshock目录，</p>
+<pre><code>ls -l
+</code></pre>
+<p>可以看到其中文件：</p>
+<p>GeoIP.dat
+Newtonsoft.Json.dll
+OTAPI.dll
+ServerLog.txt
+ServerPlugins
+sqlite3.dll
+TerrariaServer.exe
+tshock</p>
+<p>运行Tshock：</p>
+<pre><code>screen mono TerrariaServer.exe
+</code></pre>
+<p>这就可以开始配置服务器了。</p>
+<p><strong>配置服务器：</strong></p>
+<p>样式如下：</p>
+<p>n 新建世界</p>
+<p>d 删除世界</p>
+<p>choose world：</p>
+<p><strong>新建世界：</strong></p>
+<p>choose world: n</p>
+<p>输入“世界”名称.</p>
+<p>Max players (press enter for 8):（设置玩家数量，最大不超过8）</p>
+<p>Server port (press enter for 7777): （设置端口，不超过7777）</p>
+<p>Automatically forward port? (y/n):y</p>
+<p>Server password (press enter for none):（设置密码）</p>
+<p>然后就看命令行滚动吧，需要一段时间，滚动完毕以后即表示服务器配置完成。</p>
+<p>此时可以用Ctrl+A+D切出会话，使服务器在后台运行即可。</p>
+<p>打开游戏，通过你服务器的公网ip地址、端口、密码登入即可开始游戏了。</p>
+<p>PS：</p>
+<p>下次若想要重新配置游戏世界，步骤如下：</p>
+<pre><code>screen -ls
+</code></pre>
+<p>There is a screen on:
+​              *****.pts-0.izwz928lyt2y9r0sxag9dsz (Detached)
+1 Socket in /var/run/screen/S-root.</p>
+<p>（星号即之前使用的会话 id号）</p>
+<pre><code>screen -r *****
+</code></pre>
+<p>即可切换到启动了服务器的会话，此时运行</p>
+<pre><code>mono TerrariaServer.exe
+</code></pre>
+<p>可继续进行服务器配置。</p>
+<p>Ctrl+A+D可再切出会话。</p>
+
+            </div>
+          </article>
+        </div>
+    
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://leohuaji.github.io/post/Ial8ZIfo7">
+              <h3 class="post-title">
+                关于Windows和Ubuntu的时间差问题的解决方法
+              </h3>
+            </a>
+          </div>  
+        
+
+        
+    
+        <div class="site-footer">
+  Copyright © 2019 - Huaji </br>
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>关于Windows和Ubuntu的时间差问题的解决方法 | Huaji</title>
+<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1557070355556">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://leohuaji.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://leohuaji.github.io">
+  <img class="avatar" src="https://leohuaji.github.io/images/avatar.png?v=1557070355556" alt="">
+  </a>
+  <h1 class="site-title">
+    Huaji
+  </h1>
+  <p class="site-description">
+    滑天下之大稽
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/friends_link/" class="menu">
+          友情链接
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+      
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              关于Windows和Ubuntu的时间差问题的解决方法
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2017-10-29 ·
+              </time>
+              
+                <a href="https://leohuaji.github.io/tag/ubuntu" class="post-tags">
+                  # Ubuntu
+                </a>
+              
+                <a href="https://leohuaji.github.io/tag/linux" class="post-tags">
+                  # Linux
+                </a>
+              
+            </div>
+            
+              <div class="post-feature-image" style="background-image: url('http://ww1.sinaimg.cn/mw690/aa773c9egy1g2g52fzt6qj20n20csdg3.jpg')">
+              </div>
+            
+            <div class="post-content">
+              <p>先说下两个概念：</p>
+<p><strong>UTC</strong> 即Universal Time Coordinated，<strong>协调世界时</strong>（<a href="https://baike.baidu.com/item/%E5%8D%8F%E8%B0%83%E4%B8%96%E7%95%8C%E6%97%B6/787659?fr=aladdin">世界统一时间</a>）</p>
+<p><strong>GMT</strong> 即Greenwich Mean Time，<strong>格林尼治平时</strong></p>
+<p>Windows 与 Mac/Linux 看待系统硬件时间的方式是不一样的：</p>
+<p>Windows把计算机硬件时间当作本地时间(local time)，所以在Windows系统中显示的时间跟BIOS中显示的时间是一样的。</p>
+<p>Linux/Unix/Mac把计算机硬件时间当作 UTC， 所以在Linux/Unix/Mac系统启动后在该时间的基础上，加上电脑设置的时区数（ 比如我们在中国，它就加上“8” ），因此，Linux/Unix/Mac系统中显示的时间总是比Windows系统中显示的时间快8个小时。</p>
+<p>所以，当你在Linux/Unix/Mac系统中，把系统现实的时间设置正确后，其实计算机硬件时间是在这个时间上减去8小时，所以当你切换成Windows系统后，会发现时间慢了8小时。就是这样个原因。</p>
+<p>既然知道原因了，就好解决了。</p>
+<p>这里提供两种解决方法:</p>
+<p><strong>方法一</strong>：</p>
+<p>在Ubuntu中把计算机硬件时间改成系统显示的时间，即禁用Ubuntu的UTC。</p>
+<p>这又有另一个需要注意的地方：</p>
+<p>在 Ubuntu 16.04 版本以前，关闭UTC的方法是编辑/etc/default/rcS，将UTC=yes改成UTC=no， 但在Ubuntu 16.04使用systemd启动之后，时间改成了由timedatectl来管理，所以更改方法是</p>
+<pre><code>timedatectl set-local-rtc 1 --adjust-system-clock
+</code></pre>
+<p>执行后重启Ubuntu，应该就没有问题了。</p>
+<p><strong>方法二</strong>：</p>
+<p>修改 Windows对硬件时间的对待方式，让 Windows把硬件时间当作UTC.</p>
+<p>打开命令行程序，在命令行中输入下面命令并回车</p>
+<pre><code>Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+</code></pre>
+<p>应该就没有问题了。</p>
+<p>这两种方法，我个人倾向于使用第一种。</p>
+
+            </div>
+          </article>
+        </div>
+    
+        
+
+        
+    
+        <div class="site-footer">
+  Copyright © 2019 - Huaji </br>
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

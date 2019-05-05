@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ubuntu下使用apt-get方式安装tomcat后eclipse提示“Could not load the Tomcat server   configuration at /usr/share/tomcat8/conf.”的解决方法 | Huaji</title>
+<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1557070355556">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://leohuaji.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://leohuaji.github.io">
+  <img class="avatar" src="https://leohuaji.github.io/images/avatar.png?v=1557070355556" alt="">
+  </a>
+  <h1 class="site-title">
+    Huaji
+  </h1>
+  <p class="site-description">
+    滑天下之大稽
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/friends_link/" class="menu">
+          友情链接
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+      
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Ubuntu下使用apt-get方式安装tomcat后eclipse提示“Could not load the Tomcat server   configuration at /usr/share/tomcat8/conf.”的解决方法
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2018-04-10 ·
+              </time>
+              
+                <a href="https://leohuaji.github.io/tag/ubuntu" class="post-tags">
+                  # Ubuntu
+                </a>
+              
+                <a href="https://leohuaji.github.io/tag/linux" class="post-tags">
+                  # Linux
+                </a>
+              
+                <a href="https://leohuaji.github.io/tag/tomcat" class="post-tags">
+                  # Tomcat
+                </a>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>因为嫌从官网下载安装tomcat后配置环境变量和端口太麻烦，我选择了直接使用apt-get从Ubuntu源安装tomcat，安装过程一帆风顺，结果在eclipse中配置配置eclipse是却出现了麻烦。</p>
+<p>本文介绍eclipse配置tomcat后，运行项目提示“Could not load the Tomcat server configuration at /usr/share/tomcat8/conf.”的问题解决方法。</p>
+<p>先介绍Ubuntu源安装tomcat</p>
+<p><strong>安装tomcat：</strong></p>
+<pre><code>sudo apt-get install tomcat8
+</code></pre>
+<p>一会儿过后，tomcat8即安装成功，目录/usr/share/tomcat8</p>
+<p><strong>启动tomcat：</strong></p>
+<pre><code>service tomcat8 start
+</code></pre>
+<p>此时打开浏览器，访问http://localhost:8080</p>
+<p>页面显示安装成功</p>
+<p>美滋滋的打开eclipse配置好tomcat，运行项目时却提示如下：</p>
+<p>Could not load the Tomcat server configuration at /Servers/Tomcat v7.0 Server at localhost-config. The configuration may be corrupt or incomplete.</p>
+<p>本文即旨在解决此问题。</p>
+<p>问题原因：通过apt-get源安装的tomcat，Ubuntu会将tomcat文件分配到多个目录，之后在eclipse中配置tomcat时，eclipse无法识别tomcat的配置。</p>
+<p><strong>解决方法：</strong></p>
+<pre><code>sudo ln -s /var/lib/tomcat8/conf /usr/share/tomcat8/conf
+</code></pre>
+<pre><code>sudo ln -s /etc/tomcat8/policy.d/03catalina.policy /usr/share/tomcat8/conf/catalina.policy
+</code></pre>
+<pre><code>sudo ln -s /var/log/tomcat8/ /usr/share/tomcat8/log
+</code></pre>
+<pre><code>sudo chmod -R 777 /usr/share/tomcat8/conf
+</code></pre>
+<p>以上命令将tomcat的多个文件目录软链接到了主目录/usr/share/tomcat8中，并给予足够权限。这样，在eclipse中运行项目就不会再收到上面的错误提示了。</p>
+
+            </div>
+          </article>
+        </div>
+    
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://leohuaji.github.io/post/Lh6o8o9ql">
+              <h3 class="post-title">
+                利用Tshock在Centos上搭建Terraria云服务器
+              </h3>
+            </a>
+          </div>  
+        
+
+        
+    
+        <div class="site-footer">
+  Copyright © 2019 - Huaji </br>
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

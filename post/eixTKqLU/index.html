@@ -1,0 +1,156 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>使用(*.frm *.MYD *.MYI)文件恢复MySql数据库 | Huaji</title>
+<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1557070355556">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://leohuaji.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://leohuaji.github.io">
+  <img class="avatar" src="https://leohuaji.github.io/images/avatar.png?v=1557070355556" alt="">
+  </a>
+  <h1 class="site-title">
+    Huaji
+  </h1>
+  <p class="site-description">
+    滑天下之大稽
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/friends_link/" class="menu">
+          友情链接
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+      
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              使用(*.frm *.MYD *.MYI)文件恢复MySql数据库
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-03-11 ·
+              </time>
+              
+            </div>
+            
+              <div class="post-feature-image" style="background-image: url('http://ww1.sinaimg.cn/mw690/aa773c9egy1g2g50k42umj20gv076why.jpg')">
+              </div>
+            
+            <div class="post-content">
+              <p>意外得到（雾）一个数据库文件夹<strong>data</strong>，其中包含一个数据库名文件夹<strong>db_name</strong>，打开数据库文件夹，其包含：相同数量的<strong>frm</strong>、<strong>myd</strong>、<strong>myi</strong>格式的文件，及一个<strong>db.opt</strong>文件。</p>
+<p>文件夹结构图如下：</p>
+<ul>
+<li>data
+<ul>
+<li>db_name
+<ul>
+<li>db.opt——数据库编码信息文件</li>
+<li>*.frm  ——数据表结果文件</li>
+<li>*.myd ——数据表数据文件</li>
+<li>*.myi  ——数据表索引文件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>将上述数据库文件导入Mysql：</p>
+<ol>
+<li>
+<p>进入Mysql安装目录（前提是Mysql已经被安装）</p>
+</li>
+<li>
+<p>在安装目录下，找到<strong>my.ini</strong>文件，使用编辑器（推荐使用sublime_text）打开，打开后找到datadir所在目录。</p>
+<p>如：datadir=&quot;D:\mysql-5.7.18-winx64\data&quot;</p>
+</li>
+<li>
+<p>将数据库文件夹<strong>db_name</strong>复制到找到的目录中</p>
+</li>
+<li>
+<p>重启Mysql服务后，就能在数据库中看到以db_name为名的数据库了</p>
+</li>
+</ol>
+
+            </div>
+          </article>
+        </div>
+    
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://leohuaji.github.io/post/AAUddrkYS">
+              <h3 class="post-title">
+                搬瓦工Shadowsocks隐藏安装入口
+              </h3>
+            </a>
+          </div>  
+        
+
+        
+    
+        <div class="site-footer">
+  Copyright © 2019 - Huaji </br>
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

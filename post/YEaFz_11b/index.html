@@ -1,0 +1,150 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>phpMyAdmin提示The mbstring extension is missing. Please check your PHP   configuration.的解决方法 | Huaji</title>
+<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1557070355556">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://leohuaji.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://leohuaji.github.io">
+  <img class="avatar" src="https://leohuaji.github.io/images/avatar.png?v=1557070355556" alt="">
+  </a>
+  <h1 class="site-title">
+    Huaji
+  </h1>
+  <p class="site-description">
+    滑天下之大稽
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+      
+        <a href="/post/friends_link/" class="menu">
+          友情链接
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+      
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              phpMyAdmin提示The mbstring extension is missing. Please check your PHP   configuration.的解决方法
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-02-15 ·
+              </time>
+              
+                <a href="https://leohuaji.github.io/tag/ubuntu" class="post-tags">
+                  # Ubuntu
+                </a>
+              
+                <a href="https://leohuaji.github.io/tag/linux" class="post-tags">
+                  # Linux
+                </a>
+              
+            </div>
+            
+              <div class="post-feature-image" style="background-image: url('http://ww1.sinaimg.cn/mw690/aa773c9egy1g2g51nlpyhj20dw05kt9e.jpg')">
+              </div>
+            
+            <div class="post-content">
+              <p>本文介绍在Linux（本人使用的是Ubuntu）安装phpMyAdmin后，打开<em>http://localhost/phpmyadmin</em>提示“The mbstring extension is missing. Please check your PHP configuration.”的解决方法。</p>
+<p>安装phpMyAdmin：</p>
+<p>打开终端，输入以下命令行：</p>
+<pre><code>sudo apt-get install phpmyadmin
+</code></pre>
+<p>具体步骤不再赘述（安装选项我选的Apache）。</p>
+<p>安装完后，phpMyAdmin提示“The mbstring extension is missing. Please check your PHP configuration.”</p>
+<p><strong>解决方法：</strong></p>
+<p>在你的Apache目录底下，找到php.ini这个文件，使用root权限vi（或vim）编辑它。</p>
+<p>以我的目录为例：</p>
+<pre><code>sudo vim /etc/php/7.0/apache2/php.ini
+</code></pre>
+<p>在大概888行左右，找到“;extension=php_mbstring.dll”这一条，把前面的分号（即注释）去掉。</p>
+<p>然后保存退出。</p>
+<p>再重新启动Apache：</p>
+<pre><code>service apache2 restart
+</code></pre>
+<p>此时，再打开phpMyAdmin，理论上就没有问题了。</p>
+
+            </div>
+          </article>
+        </div>
+    
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://leohuaji.github.io/post/8OUmZQ1Lm">
+              <h3 class="post-title">
+                Ubuntu下使用apt-get方式安装tomcat后eclipse提示“Could not load the Tomcat server   configuration at /usr/share/tomcat8/conf.”的解决方法
+              </h3>
+            </a>
+          </div>  
+        
+
+        
+    
+        <div class="site-footer">
+  Copyright © 2019 - Huaji </br>
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
