@@ -7,7 +7,7 @@
 <meta name="description" content="滑天下之大稽">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1557858131222">
+<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1557858241011">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
@@ -132,8 +132,10 @@ Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.e
 <p>安装至此，本以为运行命令行：<code>php artisan serve</code> 就能够见到Laravel安装成功的页面展示了，但是却依然出现了问题。</p>
 <ul>
 <li>500 server error
-解决方法：将项目根目录下的<code>.env.example</code>重命名为<code>.env</code>，因为<code>.env.example</code>只是一个新创建项目的示例模板，而<code>.env</code>才是真正的配置文件。
-再次启动服务器，又碰到了问题：</li>
+解决方法：将项目根目录下的<code>.env.example</code>重命名为<code>.env</code>，因为<code>.env.example</code>只是一个新创建项目的示例模板，而<code>.env</code>才是真正的配置文件。</li>
+</ul>
+<p>再次启动服务器，又碰到了问题。</p>
+<ul>
 <li>/storage/logs/.log/日志内容<code>local.ERROR: No application encryption key has been specified.</code>
 解决方法：执行命令行：<code>php artisan key:generate</code> （生成项目key值 自动填到 .env文件中 APP_KEY）
 再次启动服务器，终于见到了想见的Laravel安装成功页面。</li>
@@ -161,7 +163,7 @@ Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.e
 
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
-    <img src="https://leohuaji.github.io/images/avatar.png?v=1557858131222" class="no-responsive avatar">
+    <img src="https://leohuaji.github.io/images/avatar.png?v=1557858241011" class="no-responsive avatar">
     <div class="text-muted">滑天下之大稽</div>
     <div class="social-container">
       
@@ -255,15 +257,15 @@ Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.e
     </div>
     <div class="row">
       
-        <a href="https://leohuaji.github.io/tag/wordpress" class="badge ">
+        <a href="https://leohuaji.github.io/tag/wordpress" class="badge warning">
           Wordpress
         </a>
       
-        <a href="https://leohuaji.github.io/tag/shadowsocks" class="badge success">
+        <a href="https://leohuaji.github.io/tag/shadowsocks" class="badge ">
           Shadowsocks
         </a>
       
-        <a href="https://leohuaji.github.io/tag/ubuntu" class="badge ">
+        <a href="https://leohuaji.github.io/tag/ubuntu" class="badge secondary">
           Ubuntu
         </a>
       
@@ -271,7 +273,7 @@ Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.e
           Linux
         </a>
       
-        <a href="https://leohuaji.github.io/tag/tomcat" class="badge secondary">
+        <a href="https://leohuaji.github.io/tag/tomcat" class="badge success">
           Tomcat
         </a>
       
@@ -279,7 +281,7 @@ Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.e
           Terraria
         </a>
       
-        <a href="https://leohuaji.github.io/tag/centos" class="badge warning">
+        <a href="https://leohuaji.github.io/tag/centos" class="badge secondary">
           CentOS
         </a>
       
