@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1566037289956">
+<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1566037385235">
 <link rel="stylesheet" href="https://leohuaji.github.io/styles/main.css">
 
 
@@ -29,7 +29,7 @@
   <div class="site-header">
     <div class="left">
       <a href="https://leohuaji.github.io">
-        <img class="avatar" src="https://leohuaji.github.io/images/avatar.png?v=1566037289956" alt="" width="32px" height="32px">
+        <img class="avatar" src="https://leohuaji.github.io/images/avatar.png?v=1566037385235" alt="" width="32px" height="32px">
       </a>
       <a href="https://leohuaji.github.io">
         <h1 class="site-title">Huaji</h1>
@@ -91,10 +91,10 @@
             
           </div>
           <div class="post-content">
-            <p><strong>安装composer</strong>
+            <p><strong>安装composer</strong><br>
 Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.exe">Composer-Setup.exe</a>，它将安装最新版本的 Composer ，并设置好系统的环境变量，因此你可以在任何目录下直接使用 composer 命令。</p>
-<p><strong>更换安装源</strong>
-由于composer官方源被墙，导致接下来的安装速度将会极慢，所以可以考虑更换国内源，如：<a href="https://packagist.laravel-china.org/">https://packagist.laravel-china.org/</a>。
+<p><strong>更换安装源</strong><br>
+由于composer官方源被墙，导致接下来的安装速度将会极慢，所以可以考虑更换国内源，如：<a href="https://packagist.laravel-china.org/">https://packagist.laravel-china.org/</a>。<br>
 更换方式有两种：</p>
 <ul>
 <li>选项一、全局配置（推荐）</li>
@@ -102,17 +102,17 @@ Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.e
 <pre><code>$ composer config -g repo.packagist composer https://packagist.laravel-china.org
 </code></pre>
 <ul>
-<li>选项二、单独项目配置
+<li>选项二、单独项目配置<br>
 如果仅限当前工程使用镜像，去掉 -g 即可，如下：</li>
 </ul>
 <pre><code>$ composer config repo.packagist composer https://packagist.laravel-china.org
 </code></pre>
-<p><strong>创建一个新的 Laravel 项目</strong>
+<p><strong>创建一个新的 Laravel 项目</strong><br>
 创建一个新的 Laravel 项目有两种方式，都由命令行执行的：第一种是通过全局的 Laravel 安装器，另一种是通过 Composer 的 create-project 命令。</p>
 <ul>
-<li><strong>使用 Laravel 安装器安装</strong>
-安装 Laravel 安装器很简单，在命令行执行以下命令即可（如果已经安装过，会自动进行更新）：
-<code>$ composer global require laravel/installer</code>
+<li><strong>使用 Laravel 安装器安装</strong><br>
+安装 Laravel 安装器很简单，在命令行执行以下命令即可（如果已经安装过，会自动进行更新）：<br>
+<code>$ composer global require laravel/installer</code><br>
 安装完成后，后续就可以通过 laravel new [项目名称] 来创建新的 Laravel 项目：</li>
 </ul>
 <pre><code>laravel new First_lv
@@ -127,13 +127,13 @@ Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.e
 </code></pre>
 <p>安装至此，本以为运行命令行：<code>php artisan serve</code> 就能够见到Laravel安装成功的页面展示了，但是却依然出现了问题。</p>
 <ul>
-<li>500 server error
+<li>500 server error<br>
 解决方法：将项目根目录下的<code>.env.example</code>重命名为<code>.env</code>，因为<code>.env.example</code>只是一个新创建项目的示例模板，而<code>.env</code>才是真正的配置文件。</li>
 </ul>
 <p>再次启动服务器，又碰到了问题。</p>
 <ul>
-<li>/storage/logs/.log/日志内容<code>local.ERROR: No application encryption key has been specified.</code>
-解决方法：执行命令行：<code>php artisan key:generate</code> （生成项目key值 自动填到 .env文件中 APP_KEY）
+<li>/storage/logs/.log/日志内容<code>local.ERROR: No application encryption key has been specified.</code><br>
+解决方法：执行命令行：<code>php artisan key:generate</code> （生成项目key值 自动填到 .env文件中 APP_KEY）<br>
 再次启动服务器，终于见到了想见的Laravel安装成功页面。</li>
 </ul>
 
