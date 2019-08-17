@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://leohuaji.github.io</id>
     <title>Huaji</title>
-    <updated>2019-05-30T04:26:16.893Z</updated>
+    <updated>2019-08-17T10:17:38.998Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://leohuaji.github.io"/>
     <link rel="self" href="https://leohuaji.github.io/atom.xml"/>
@@ -10,6 +10,19 @@
     <logo>https://leohuaji.github.io/images/avatar.png</logo>
     <icon>https://leohuaji.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Huaji</rights>
+    <entry>
+        <title type="html"><![CDATA[Firefox设置搜索结果在新窗口打开（而不是覆盖原有的页面）]]></title>
+        <id>https://leohuaji.github.io/post/firefox-she-zhi-sou-suo-jie-guo-zai-xin-chuang-kou-da-kai-er-bu-shi-fu-gai-yuan-you-de-ye-mian</id>
+        <link href="https://leohuaji.github.io/post/firefox-she-zhi-sou-suo-jie-guo-zai-xin-chuang-kou-da-kai-er-bu-shi-fu-gai-yuan-you-de-ye-mian">
+        </link>
+        <updated>2019-08-17T10:13:39.000Z</updated>
+        <content type="html"><![CDATA[<p>1、首先打开Firefox浏览器，在地址栏输入“about:config”</p>
+<p>2、按回车键后，打开了一个警告页面，单击“我保证会小心”</p>
+<p>3、单击后进入设置页面，包含很多项目，按照字母顺序找到“browser.search.openintab”</p>
+<p>4、在“值”那一项下看到“false”，双击该行改为“true”，或者在该行单击右键，选择“切换”</p>
+<p>5、确认改为“true”后，重启Firefox浏览器即可生效</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[网页外链音乐播放器]]></title>
         <id>https://leohuaji.github.io/post/wang-ye-wai-lian-yin-le-bo-fang-qi</id>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Ubuntu下使用apt-get方式安装tomcat后eclipse提示“Could not load the Tomcat server   configuration at /usr/share/tomcat8/conf.”的解决方法 | Huaji</title>
+<title>Firefox设置搜索结果在新窗口打开（而不是覆盖原有的页面） | Huaji</title>
 <meta name="description" content="滑天下之大稽">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -88,51 +88,18 @@
       <div class="sm-12 md-8 col">
         <div class="paper">
           <article class="article">
-            <h1>Ubuntu下使用apt-get方式安装tomcat后eclipse提示“Could not load the Tomcat server   configuration at /usr/share/tomcat8/conf.”的解决方法</h1>
+            <h1>Firefox设置搜索结果在新窗口打开（而不是覆盖原有的页面）</h1>
             <p class="article-meta">
-              2018-04-10
-              
-                <a href="https://leohuaji.github.io/tag/ubuntu" class="badge secondary">
-                  Ubuntu
-                </a>
-              
-                <a href="https://leohuaji.github.io/tag/linux" class="badge warning">
-                  Linux
-                </a>
-              
-                <a href="https://leohuaji.github.io/tag/tomcat" class="badge success">
-                  Tomcat
-                </a>
+              2019-08-17
               
             </p>
             
             <div class="post-content">
-              <p>因为嫌从官网下载安装tomcat后配置环境变量和端口太麻烦，我选择了直接使用apt-get从Ubuntu源安装tomcat，安装过程一帆风顺，结果在eclipse中配置配置eclipse是却出现了麻烦。</p>
-<p>本文介绍eclipse配置tomcat后，运行项目提示“Could not load the Tomcat server configuration at /usr/share/tomcat8/conf.”的问题解决方法。</p>
-<p>先介绍Ubuntu源安装tomcat</p>
-<p><strong>安装tomcat：</strong></p>
-<pre><code>sudo apt-get install tomcat8
-</code></pre>
-<p>一会儿过后，tomcat8即安装成功，目录/usr/share/tomcat8</p>
-<p><strong>启动tomcat：</strong></p>
-<pre><code>service tomcat8 start
-</code></pre>
-<p>此时打开浏览器，访问http://localhost:8080</p>
-<p>页面显示安装成功</p>
-<p>美滋滋的打开eclipse配置好tomcat，运行项目时却提示如下：</p>
-<p>Could not load the Tomcat server configuration at /Servers/Tomcat v7.0 Server at localhost-config. The configuration may be corrupt or incomplete.</p>
-<p>本文即旨在解决此问题。</p>
-<p>问题原因：通过apt-get源安装的tomcat，Ubuntu会将tomcat文件分配到多个目录，之后在eclipse中配置tomcat时，eclipse无法识别tomcat的配置。</p>
-<p><strong>解决方法：</strong></p>
-<pre><code>sudo ln -s /var/lib/tomcat8/conf /usr/share/tomcat8/conf
-</code></pre>
-<pre><code>sudo ln -s /etc/tomcat8/policy.d/03catalina.policy /usr/share/tomcat8/conf/catalina.policy
-</code></pre>
-<pre><code>sudo ln -s /var/log/tomcat8/ /usr/share/tomcat8/log
-</code></pre>
-<pre><code>sudo chmod -R 777 /usr/share/tomcat8/conf
-</code></pre>
-<p>以上命令将tomcat的多个文件目录软链接到了主目录/usr/share/tomcat8中，并给予足够权限。这样，在eclipse中运行项目就不会再收到上面的错误提示了。</p>
+              <p>1、首先打开Firefox浏览器，在地址栏输入“about:config”</p>
+<p>2、按回车键后，打开了一个警告页面，单击“我保证会小心”</p>
+<p>3、单击后进入设置页面，包含很多项目，按照字母顺序找到“browser.search.openintab”</p>
+<p>4、在“值”那一项下看到“false”，双击该行改为“true”，或者在该行单击右键，选择“切换”</p>
+<p>5、确认改为“true”后，重启Firefox浏览器即可生效</p>
 
             </div>
           </article>
@@ -143,9 +110,9 @@
               <div class="next">
                 下一篇
               </div>
-              <a href="https://leohuaji.github.io/post/Lh6o8o9ql">
+              <a href="https://leohuaji.github.io/post/wang-ye-wai-lian-yin-le-bo-fang-qi">
                 <h3 class="post-title">
-                  利用Tshock在Centos上搭建Terraria云服务器
+                  网页外链音乐播放器
                 </h3>
               </a>
             </div>
@@ -252,11 +219,11 @@
           Wordpress
         </a>
       
-        <a href="https://leohuaji.github.io/tag/shadowsocks" class="badge secondary">
+        <a href="https://leohuaji.github.io/tag/shadowsocks" class="badge success">
           Shadowsocks
         </a>
       
-        <a href="https://leohuaji.github.io/tag/ubuntu" class="badge secondary">
+        <a href="https://leohuaji.github.io/tag/ubuntu" class="badge warning">
           Ubuntu
         </a>
       
@@ -264,15 +231,15 @@
           Linux
         </a>
       
-        <a href="https://leohuaji.github.io/tag/tomcat" class="badge warning">
+        <a href="https://leohuaji.github.io/tag/tomcat" class="badge secondary">
           Tomcat
         </a>
       
-        <a href="https://leohuaji.github.io/tag/terraria" class="badge warning">
+        <a href="https://leohuaji.github.io/tag/terraria" class="badge success">
           Terraria
         </a>
       
-        <a href="https://leohuaji.github.io/tag/centos" class="badge ">
+        <a href="https://leohuaji.github.io/tag/centos" class="badge secondary">
           CentOS
         </a>
       
