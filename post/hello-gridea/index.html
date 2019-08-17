@@ -7,98 +7,102 @@
 <meta name="description" content="滑天下之大稽">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1566037055947">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
+<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1566037128336">
 <link rel="stylesheet" href="https://leohuaji.github.io/styles/main.css">
 
 
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
+
   </head>
   <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://leohuaji.github.io">Huaji</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://leohuaji.github.io">
+        <img src="https://leohuaji.github.io/images/avatar.png?v=1566037128336" class="site-logo">
+        <h1 class="site-title">Huaji</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
         
-          <li>
-            
-              <a href="/" class="menu">
-                首页
-              </a>
-            
-          </li>
+          <a href="/" class="site-nav">
+            首页
+          </a>
         
-          <li>
-            
-              <a href="/archives" class="menu">
-                归档
-              </a>
-            
-          </li>
+      
         
-          <li>
-            
-              <a href="/tags" class="menu">
-                标签
-              </a>
-            
-          </li>
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
         
-          <li>
-            
-              <a href="/post/about" class="menu">
-                关于
-              </a>
-            
-          </li>
+      
         
-          <li>
-            
-              <a href="/post/friends_link/" class="menu">
-                友情链接
-              </a>
-            
-          </li>
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
         
-      </ul>
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="/post/friends_link/" class="site-nav">
+            友情链接
+          </a>
+        
+      
     </div>
   </div>
-</nav>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      滑天下之大稽
+    </div>
+    <div class="site-footer">
+      Copyright © 2019 - <a href="https://leohuaji.github.io/">Huaji</a> </br>
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+    </div>
+  </div>
+</div>
 
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>Hello Gridea</h1>
-            <p class="article-meta">
-              2018-12-12
-              
-                <a href="https://leohuaji.github.io/tag/gridea" class="badge secondary">
-                  Gridea
-                </a>
-              
-            </p>
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Hello Gridea</h2>
+            <div class="post-date">2018-12-12</div>
             
-              <img src="https://leohuaji.github.io/post-images/hello-gridea.png" alt="Hello Gridea">
+              <div class="feature-container" style="background-image: url('https://leohuaji.github.io/post-images/hello-gridea.png')">
+              </div>
             
             <div class="post-content">
               <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
@@ -124,145 +128,23 @@
 <p>😘 Enjoy~</p>
 
             </div>
-          </article>
+            
+              <div class="tag-container">
+                
+                  <a href="https://leohuaji.github.io/tag/gridea" class="tag">
+                    Gridea
+                  </a>
+                
+              </div>
+            
+            
+
+            
+
+          </div>
+
         </div>
-        <div class="paper" data-aos="fade-in">
-          
-        </div>
-        
       </div>
-
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://leohuaji.github.io/images/avatar.png?v=1566037055947" class="no-responsive avatar">
-    <div class="text-muted">滑天下之大稽</div>
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
-    </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://leohuaji.github.io/post/firefox-she-zhi-sou-suo-jie-guo-zai-xin-chuang-kou-da-kai-er-bu-shi-fu-gai-yuan-you-de-ye-mian">Firefox设置搜索结果在新窗口打开（而不是覆盖原有的页面）</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://leohuaji.github.io/post/wang-ye-wai-lian-yin-le-bo-fang-qi">网页外链音乐播放器</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://leohuaji.github.io/post/laravel-an-zhuang-guo-cheng-zhong-peng-dao-de-keng">Laravel安装过程中碰到的坑</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://leohuaji.github.io/post/r8iieszvr">Wordpress在https下加载CSS、JS的方法</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://leohuaji.github.io/post/eixTKqLU">使用(*.frm *.MYD *.MYI)文件恢复MySql数据库</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://leohuaji.github.io/post/AAUddrkYS">搬瓦工Shadowsocks隐藏安装入口</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://leohuaji.github.io/post/YEaFz_11b">phpMyAdmin提示The mbstring extension is missing. Please check your PHP   configuration.的解决方法</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://leohuaji.github.io/post/8OUmZQ1Lm">Ubuntu下使用apt-get方式安装tomcat后eclipse提示“Could not load the Tomcat server   configuration at /usr/share/tomcat8/conf.”的解决方法</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://leohuaji.github.io/post/Lh6o8o9ql">利用Tshock在Centos上搭建Terraria云服务器</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://leohuaji.github.io/post/Ial8ZIfo7">关于Windows和Ubuntu的时间差问题的解决方法</a>
-            </li>
-          
-        
-      </ul>
-    </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://leohuaji.github.io/tag/wordpress" class="badge success">
-          Wordpress
-        </a>
-      
-        <a href="https://leohuaji.github.io/tag/shadowsocks" class="badge warning">
-          Shadowsocks
-        </a>
-      
-        <a href="https://leohuaji.github.io/tag/ubuntu" class="badge secondary">
-          Ubuntu
-        </a>
-      
-        <a href="https://leohuaji.github.io/tag/linux" class="badge secondary">
-          Linux
-        </a>
-      
-        <a href="https://leohuaji.github.io/tag/tomcat" class="badge warning">
-          Tomcat
-        </a>
-      
-        <a href="https://leohuaji.github.io/tag/terraria" class="badge secondary">
-          Terraria
-        </a>
-      
-        <a href="https://leohuaji.github.io/tag/centos" class="badge ">
-          CentOS
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    Copyright © 2019 - <a href="https://leohuaji.github.io/">Huaji</a> </br>
-Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-  </div>
-</div>
-
-
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -272,6 +154,13 @@ Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea<
 AOS.init();
 
 hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
 
