@@ -1,15 +1,18 @@
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
+    
+<meta charset="utf-8" >
 
 <title>Laravel安装过程中碰到的坑 | Huaji</title>
 <meta name="description" content="滑天下之大稽">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1566037128336">
+<link rel="shortcut icon" href="https://leohuaji.github.io/favicon.ico?v=1566037289956">
 <link rel="stylesheet" href="https://leohuaji.github.io/styles/main.css">
 
 
@@ -17,92 +20,78 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
 
 
   </head>
   <body>
     <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://leohuaji.github.io">
-        <img src="https://leohuaji.github.io/images/avatar.png?v=1566037128336" class="site-logo">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://leohuaji.github.io">
+        <img class="avatar" src="https://leohuaji.github.io/images/avatar.png?v=1566037289956" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://leohuaji.github.io">
         <h1 class="site-title">Huaji</h1>
       </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
     </div>
-    <div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
       
         
-          <a href="/" class="site-nav">
+          <a href="/" class="menu purple-link">
             首页
           </a>
         
       
         
-          <a href="/archives" class="site-nav">
+          <a href="/archives" class="menu purple-link">
             归档
           </a>
         
       
         
-          <a href="/tags" class="site-nav">
+          <a href="/tags" class="menu purple-link">
             标签
           </a>
         
       
         
-          <a href="/post/about" class="site-nav">
+          <a href="/post/about" class="menu purple-link">
             关于
           </a>
         
       
         
-          <a href="/post/friends_link/" class="site-nav">
+          <a href="/post/friends_link/" class="menu purple-link">
             友情链接
           </a>
         
       
     </div>
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-    <div class="site-description">
-      滑天下之大稽
-    </div>
-    <div class="site-footer">
-      Copyright © 2019 - <a href="https://leohuaji.github.io/">Huaji</a> </br>
-Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
-    </div>
-  </div>
-</div>
+</transition>
 
 
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">Laravel安装过程中碰到的坑</h2>
-            <div class="post-date">2019-05-15</div>
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">Laravel安装过程中碰到的坑</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-05-15</span>
             
-            <div class="post-content">
-              <p><strong>安装composer</strong>
+          </div>
+          <div class="post-content">
+            <p><strong>安装composer</strong>
 Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.exe">Composer-Setup.exe</a>，它将安装最新版本的 Composer ，并设置好系统的环境变量，因此你可以在任何目录下直接使用 composer 命令。</p>
 <p><strong>更换安装源</strong>
 由于composer官方源被墙，导致接下来的安装速度将会极慢，所以可以考虑更换国内源，如：<a href="https://packagist.laravel-china.org/">https://packagist.laravel-china.org/</a>。
@@ -148,32 +137,44 @@ Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.e
 再次启动服务器，终于见到了想见的Laravel安装成功页面。</li>
 </ul>
 
-            </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://leohuaji.github.io/post/r8iieszvr">
-                  <h3 class="post-title">
-                    Wordpress在https下加载CSS、JS的方法
-                  </h3>
-                </a>
-              </div>
-            
-
-            
-
           </div>
-
         </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://leohuaji.github.io/post/r8iieszvr">
+              <h3 class="post-title">
+                下一篇：Wordpress在https下加载CSS、JS的方法
+              </h3>
+            </a>
+          </div>
+          
       </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">滑天下之大稽</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Copyright © 2019 - <a href="https://leohuaji.github.io/">Huaji</a> </br>
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+</div>
+
+
     </div>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script type="application/javascript">
-
-AOS.init();
+    <script type="application/javascript">
 
 hljs.initHighlightingOnLoad()
 
