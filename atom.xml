@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://leohuaji.github.io</id>
     <title>简直药丸</title>
-    <updated>2019-10-11T02:29:39.616Z</updated>
+    <updated>2019-10-12T13:55:32.906Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://leohuaji.github.io"/>
     <link rel="self" href="https://leohuaji.github.io/atom.xml"/>
@@ -261,7 +261,7 @@ function agnostic_style_loader_src($src, $handle) {
 <p>开始吧。</p>
 <p><strong>安装mono：</strong></p>
 <p>Mono包并没有包含在CentOS的仓库里，通过yum是无法直接安装的，我们需要把Mono的仓库导入到包仓库里，运行如下命令行：</p>
-<pre><code>rpm --import &quot;http://keyserver.ubuntu.com/pks/lookup?op=get&amp;amp;search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF&quot;
+<pre><code>rpm --import &quot;http://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF&quot;
 </code></pre>
 <pre><code>yum-config-manager --add-repo http://download.mono-project.com/repo/centos/
 </code></pre>
