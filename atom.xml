@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://leohuaji.github.io</id>
-    <title>简直药丸</title>
-    <updated>2019-10-18T15:31:22.664Z</updated>
+    <title>leohuaji&apos;s blog</title>
+    <updated>2019-11-11T10:11:16.309Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://leohuaji.github.io"/>
     <link rel="self" href="https://leohuaji.github.io/atom.xml"/>
     <subtitle>滑天下之大稽</subtitle>
     <logo>https://leohuaji.github.io/images/avatar.png</logo>
     <icon>https://leohuaji.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, 简直药丸</rights>
+    <rights>All rights reserved 2019, leohuaji&apos;s blog</rights>
     <entry>
         <title type="html"><![CDATA[steam个人资料主页艺术展柜上传长图]]></title>
         <id>https://leohuaji.github.io/post/steam-ge-ren-zi-liao-zhu-ye-yi-zhu-zhan-ju-shang-chuan-chang-tu</id>
