@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://leohuaji.github.io</id>
-    <title>leohuaji&apos;s blog</title>
-    <updated>2019-11-11T10:11:16.309Z</updated>
+    <title>Leo Chinbin</title>
+    <updated>2021-02-09T03:51:27.963Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://leohuaji.github.io"/>
     <link rel="self" href="https://leohuaji.github.io/atom.xml"/>
     <subtitle>滑天下之大稽</subtitle>
     <logo>https://leohuaji.github.io/images/avatar.png</logo>
     <icon>https://leohuaji.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, leohuaji&apos;s blog</rights>
+    <rights>All rights reserved 2021, Leo Chinbin</rights>
     <entry>
         <title type="html"><![CDATA[steam个人资料主页艺术展柜上传长图]]></title>
-        <id>https://leohuaji.github.io/post/steam-ge-ren-zi-liao-zhu-ye-yi-zhu-zhan-ju-shang-chuan-chang-tu</id>
-        <link href="https://leohuaji.github.io/post/steam-ge-ren-zi-liao-zhu-ye-yi-zhu-zhan-ju-shang-chuan-chang-tu">
+        <id>https://leohuaji.github.io/post/steam-ge-ren-zi-liao-zhu-ye-yi-zhu-zhan-ju-shang-chuan-chang-tu/</id>
+        <link href="https://leohuaji.github.io/post/steam-ge-ren-zi-liao-zhu-ye-yi-zhu-zhan-ju-shang-chuan-chang-tu/">
         </link>
         <updated>2019-10-11T01:55:09.000Z</updated>
         <content type="html"><![CDATA[<p>成果图<br>
-<img src="https://s2.ax1x.com/2019/10/11/uHmNKP.png" alt="uHmNKP.png"></p>
+<img src="https://s2.ax1x.com/2019/10/11/uHmNKP.png" alt="uHmNKP.png" loading="lazy"></p>
 <p>步骤：<br>
 1.打开https://steam.design，下载已经自动切割好的展示图。<br>
 2.Chrome登录steam并打开个人资料页面<br>
@@ -41,8 +41,8 @@ document.getElementsByName(&quot;image_width&quot;)[0].value= num*100;
     </entry>
     <entry>
         <title type="html"><![CDATA[Firefox设置搜索结果在新窗口打开（而不是覆盖原有的页面）]]></title>
-        <id>https://leohuaji.github.io/post/firefox-she-zhi-sou-suo-jie-guo-zai-xin-chuang-kou-da-kai-er-bu-shi-fu-gai-yuan-you-de-ye-mian</id>
-        <link href="https://leohuaji.github.io/post/firefox-she-zhi-sou-suo-jie-guo-zai-xin-chuang-kou-da-kai-er-bu-shi-fu-gai-yuan-you-de-ye-mian">
+        <id>https://leohuaji.github.io/post/firefox-she-zhi-sou-suo-jie-guo-zai-xin-chuang-kou-da-kai-er-bu-shi-fu-gai-yuan-you-de-ye-mian/</id>
+        <link href="https://leohuaji.github.io/post/firefox-she-zhi-sou-suo-jie-guo-zai-xin-chuang-kou-da-kai-er-bu-shi-fu-gai-yuan-you-de-ye-mian/">
         </link>
         <updated>2019-08-17T10:13:39.000Z</updated>
         <content type="html"><![CDATA[<p>1、首先打开Firefox浏览器，在地址栏输入“about:config”</p>
@@ -54,8 +54,8 @@ document.getElementsByName(&quot;image_width&quot;)[0].value= num*100;
     </entry>
     <entry>
         <title type="html"><![CDATA[网页外链音乐播放器]]></title>
-        <id>https://leohuaji.github.io/post/wang-ye-wai-lian-yin-le-bo-fang-qi</id>
-        <link href="https://leohuaji.github.io/post/wang-ye-wai-lian-yin-le-bo-fang-qi">
+        <id>https://leohuaji.github.io/post/wang-ye-wai-lian-yin-le-bo-fang-qi/</id>
+        <link href="https://leohuaji.github.io/post/wang-ye-wai-lian-yin-le-bo-fang-qi/">
         </link>
         <updated>2019-05-30T04:19:59.000Z</updated>
         <content type="html"><![CDATA[<pre><code>&lt;audio controls=&quot;controls&quot; playsinline=&quot;&quot; webkit-playsinline=&quot;&quot;&gt;
@@ -66,8 +66,8 @@ document.getElementsByName(&quot;image_width&quot;)[0].value= num*100;
     </entry>
     <entry>
         <title type="html"><![CDATA[Laravel安装过程中碰到的坑]]></title>
-        <id>https://leohuaji.github.io/post/laravel-an-zhuang-guo-cheng-zhong-peng-dao-de-keng</id>
-        <link href="https://leohuaji.github.io/post/laravel-an-zhuang-guo-cheng-zhong-peng-dao-de-keng">
+        <id>https://leohuaji.github.io/post/laravel-an-zhuang-guo-cheng-zhong-peng-dao-de-keng/</id>
+        <link href="https://leohuaji.github.io/post/laravel-an-zhuang-guo-cheng-zhong-peng-dao-de-keng/">
         </link>
         <updated>2019-05-14T17:31:58.000Z</updated>
         <content type="html"><![CDATA[<p><strong>安装composer</strong><br>
@@ -119,8 +119,8 @@ Windows端，下载并且运行<a href="https://getcomposer.org/Composer-Setup.e
     </entry>
     <entry>
         <title type="html"><![CDATA[Wordpress在https下加载CSS、JS的方法]]></title>
-        <id>https://leohuaji.github.io/post/r8iieszvr</id>
-        <link href="https://leohuaji.github.io/post/r8iieszvr">
+        <id>https://leohuaji.github.io/post/r8iieszvr/</id>
+        <link href="https://leohuaji.github.io/post/r8iieszvr/">
         </link>
         <updated>2019-05-05T11:58:03.000Z</updated>
         <content type="html"><![CDATA[<p>在 functions.php 中加入以下代码：</p>
@@ -139,8 +139,8 @@ function agnostic_style_loader_src($src, $handle) {
     </entry>
     <entry>
         <title type="html"><![CDATA[使用(*.frm *.MYD *.MYI)文件恢复MySql数据库]]></title>
-        <id>https://leohuaji.github.io/post/eixTKqLU</id>
-        <link href="https://leohuaji.github.io/post/eixTKqLU">
+        <id>https://leohuaji.github.io/post/eixTKqLU/</id>
+        <link href="https://leohuaji.github.io/post/eixTKqLU/">
         </link>
         <updated>2019-03-11T05:57:21.000Z</updated>
         <content type="html"><![CDATA[<p>意外得到（雾）一个数据库文件夹<strong>data</strong>，其中包含一个数据库名文件夹<strong>db_name</strong>，打开数据库文件夹，其包含：相同数量的<strong>frm</strong>、<strong>myd</strong>、<strong>myi</strong>格式的文件，及一个<strong>db.opt</strong>文件。</p>
@@ -179,8 +179,8 @@ function agnostic_style_loader_src($src, $handle) {
     </entry>
     <entry>
         <title type="html"><![CDATA[搬瓦工Shadowsocks隐藏安装入口]]></title>
-        <id>https://leohuaji.github.io/post/AAUddrkYS</id>
-        <link href="https://leohuaji.github.io/post/AAUddrkYS">
+        <id>https://leohuaji.github.io/post/AAUddrkYS/</id>
+        <link href="https://leohuaji.github.io/post/AAUddrkYS/">
         </link>
         <updated>2019-03-04T09:10:47.000Z</updated>
         <content type="html"><![CDATA[<p>在VPS的Kiwivm控制面板页面打开的前提下，打开下方链接，即可进入Shadowsocks安装页面。<br>
@@ -189,8 +189,8 @@ function agnostic_style_loader_src($src, $handle) {
     </entry>
     <entry>
         <title type="html"><![CDATA[phpMyAdmin提示The mbstring extension is missing. Please check your PHP   configuration.的解决方法]]></title>
-        <id>https://leohuaji.github.io/post/YEaFz_11b</id>
-        <link href="https://leohuaji.github.io/post/YEaFz_11b">
+        <id>https://leohuaji.github.io/post/YEaFz_11b/</id>
+        <link href="https://leohuaji.github.io/post/YEaFz_11b/">
         </link>
         <updated>2019-02-15T08:36:41.000Z</updated>
         <content type="html"><![CDATA[<p>本文介绍在Linux（本人使用的是Ubuntu）安装phpMyAdmin后，打开<em>http://localhost/phpmyadmin</em>提示“The mbstring extension is missing. Please check your PHP configuration.”的解决方法。</p>
@@ -215,8 +215,8 @@ function agnostic_style_loader_src($src, $handle) {
     </entry>
     <entry>
         <title type="html"><![CDATA[Ubuntu下使用apt-get方式安装tomcat后eclipse提示“Could not load the Tomcat server   configuration at /usr/share/tomcat8/conf.”的解决方法]]></title>
-        <id>https://leohuaji.github.io/post/8OUmZQ1Lm</id>
-        <link href="https://leohuaji.github.io/post/8OUmZQ1Lm">
+        <id>https://leohuaji.github.io/post/8OUmZQ1Lm/</id>
+        <link href="https://leohuaji.github.io/post/8OUmZQ1Lm/">
         </link>
         <updated>2018-04-10T06:59:40.000Z</updated>
         <content type="html"><![CDATA[<p>因为嫌从官网下载安装tomcat后配置环境变量和端口太麻烦，我选择了直接使用apt-get从Ubuntu源安装tomcat，安装过程一帆风顺，结果在eclipse中配置配置eclipse是却出现了麻烦。</p>
@@ -249,8 +249,8 @@ function agnostic_style_loader_src($src, $handle) {
     </entry>
     <entry>
         <title type="html"><![CDATA[利用Tshock在Centos上搭建Terraria云服务器]]></title>
-        <id>https://leohuaji.github.io/post/Lh6o8o9ql</id>
-        <link href="https://leohuaji.github.io/post/Lh6o8o9ql">
+        <id>https://leohuaji.github.io/post/Lh6o8o9ql/</id>
+        <link href="https://leohuaji.github.io/post/Lh6o8o9ql/">
         </link>
         <updated>2018-04-07T10:23:57.000Z</updated>
         <content type="html"><![CDATA[<p>本文介绍如何在云服务器上搭建Terraria（泰拉瑞亚）游戏服务器。</p>
